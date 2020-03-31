@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="cn"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=1.7.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=1.7.0" type="image/png" sizes="32x32"><meta name="description" content="[TOC]                     搭建环境                 安装Nodejs 安装Git 创建github账号 本地创建文件夹，命名为Blog，博客相关文件存储在此文件夹下1234npm install hexo-cli -g  #安装hexo客户端hexo init   #初始化Hexo配置npm install hexo-deployer-git --save">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用&#39;hexo + github&#39;搭建个人博客">
+<meta property="og:url" content="https://east.github.io/2020/03/31/hexo-and-git-make-a-blog/index.html">
+<meta property="og:site_name" content="Ea3t">
+<meta property="og:description" content="[TOC]                     搭建环境                 安装Nodejs 安装Git 创建github账号 本地创建文件夹，命名为Blog，博客相关文件存储在此文件夹下1234npm install hexo-cli -g  #安装hexo客户端hexo init   #初始化Hexo配置npm install hexo-deployer-git --save">
+<meta property="og:locale" content="cn">
+<meta property="og:image" content="https://east.github.io/.io//deploy.PNG">
+<meta property="article:published_time" content="2020-03-31T08:25:37.000Z">
+<meta property="article:modified_time" content="2020-03-31T10:34:07.983Z">
+<meta property="article:author" content="East">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://east.github.io/.io//deploy.PNG"><meta name="keywords" content="East, Ea3t"><meta name="description" content="Time moves in one direction, memory in another."><title>使用'hexo + github'搭建个人博客</title><link ref="canonical" href="https://east.github.io/2020/03/31/hexo-and-git-make-a-blog/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=1.7.0"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  post_widget: {"end_text":true},
+  night_mode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","word_wrap":false},
+  reward: false,
+  fancybox: false,
+  zoom_image: {"enable":true,"mask_color":"rgba(0,0,0,0.6)"},
+  gallery_waterfall: undefined,
+  lazyload: undefined,
+  pjax: undefined,
+  external_link: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copy_button":"复制","copy_success":"复制成功","copy_error":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Ea3t</div><div class="header-banner-info__subtitle">walking and learning</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">使用'hexo + github'搭建个人博客</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-03-31</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">updated</span><span class="post-meta-item__value">2020-03-31</span></span></div></header><div class="post-body"><p>[TOC]</p>
+
+        <h1 id="搭建环境">
+          <span class="heading-link">搭建环境</span>
+        </h1>
+      <ul>
+<li>安装<span class="exturl"><a class="exturl__link" href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Nodejs</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li>安装<span class="exturl"><a class="exturl__link" href="https://git-scm.com/download/" target="_blank" rel="noopener">Git</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li>创建<span class="exturl"><a class="exturl__link" href="https://github.com" target="_blank" rel="noopener">github</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>账号</li>
+<li>本地创建<strong>文件夹</strong>，命名为Blog，博客相关文件存储在此文件夹下<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g  #安装hexo客户端</span><br><span class="line">hexo init   #初始化Hexo配置</span><br><span class="line">npm install hexo-deployer-git --save   #安装hexo部署工具</span><br><span class="line">npm install hexo-asset-image --save  # 安装图片资源管理</span><br></pre></td></tr></table></div></figure></li>
+<li>配置Git个人信息（配置完会提示重新登录）<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱&quot;</span><br></pre></td></tr></table></div></figure></li>
+<li>在Blog目录下修改_config.yml<br>  <img src="/.io//deploy.PNG" alt="图片"><br>  将主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true</li>
+<li>将hexo发布到github<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></div></figure></li>
+<li>访问网站查看效果（<span class="exturl"><a class="exturl__link" href="https://eA3t.github.io）" target="_blank" rel="noopener">https://eA3t.github.io）</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+
+        <h1 id="更换模板">
+          <span class="heading-link">更换模板</span>
+        </h1>
+      <ul>
+<li>去<span class="exturl"><a class="exturl__link" href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官网</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>挑选模板，找到其github网址</li>
+<li>复制到本地theme下<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;liuyib&#x2F;hexo-theme-stun.git themes&#x2F;stun</span><br></pre></td></tr></table></div></figure></li>
+<li>修改hexo配置_config.xml, <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: stun</span><br></pre></td></tr></table></div></figure></li>
+<li>重新发布<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></div></figure></li>
+<li>修改其他内容去配置文件中对应位置修改。</li>
+</ul>
+
+        <h1 id="发布博客">
+          <span class="heading-link">发布博客</span>
+        </h1>
+      <ul>
+<li><p>创建一篇博客，会在Blog/source/_posts/下生成md文件。</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;博客名&quot;</span><br></pre></td></tr></table></div></figure></li>
+<li><p>发布</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></div></figure></li>
+<li><p>注意插入图片：最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：</p>
+  <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![你想输入的替代文字](xxxx&#x2F;图片名.jpg)</span><br></pre></td></tr></table></div></figure>
+</li>
+</ul>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://east.github.io">East</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://east.github.io/2020/03/31/hexo-and-git-make-a-blog/">https://east.github.io/2020/03/31/hexo-and-git-make-a-blog/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2020/03/31/hello-world/"><span class="paginator-prev__text">Hello World</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#搭建环境"><span class="toc-number">1.</span> <span class="toc-text">
+          搭建环境
+        </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#更换模板"><span class="toc-number">2.</span> <span class="toc-text">
+          更换模板
+        </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#发布博客"><span class="toc-number">3.</span> <span class="toc-text">
+          发布博客
+        </span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">Time moves in one direction, memory in another.</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">Archives</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>East</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v4.2.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v1.7.0</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = 'nick,mail,link';
+
+  guest_info = guest_info.split(',').filter(function(item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#valine-container',
+    appId: 'Xlz8iJkdzFi9s73yy8fT2VGD-gzGzoHsz',
+    appKey: 'rVrjUtfzBOcAGrFqTXipNoB0',
+    notify: true,
+    verify: true,
+    placeholder: 'Just go go',
+    avatar: 'mp',
+    meta: guest_info,
+    pageSize: '10' || 10,
+    visitor: false,
+    recordIP: false,
+    lang: '' || 'zh-cn',
+    path: window.location.pathname
+  });
+}
+
+if (false) {
+  loadValine();
+} else {
+  window.addEventListener('DOMContentLoaded', loadValine, false);
+}</script><script src="/js/utils.js?v=1.7.0"></script><script src="/js/stun-boot.js?v=1.7.0"></script><script src="/js/scroll.js?v=1.7.0"></script><script src="/js/header.js?v=1.7.0"></script><script src="/js/sidebar.js?v=1.7.0"></script></body></html>
